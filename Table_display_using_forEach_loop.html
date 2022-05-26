@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table width="50%" border="1" align="center" cell-padding="1" cell-spacing="0">
+        <tr>
+            <th>Name</th>
+            <th>Phone_No</th>
+            <th>Email_Id</th>
+            <th>Gender</th>
+        </tr>
+
+        <tbody id="demo"> 
+
+        </tbody>
+
+    </table>
+
+    <script>
+        const student = [
+            {Name: "ankita", Phone_No: "9574439187", Email_Id: "ankita@gmail.com", Gender: "Female"},
+            {Name: "jayesh", Phone_No: "9574439188", Email_Id: "jayesh@gmail.com", Gender: "Male"},
+            {Name: "sanj", Phone_No: "9574439189", Email_Id: "sanj@gmail.com", Gender: "Female"},
+            {Name: "ved", Phone_No: "9574439190", Email_Id: "ved@gmail.com", Gender: "Male"},
+            {Name: "palak", Phone_No: "9574439191", Email_Id: "palak@gmail.com", Gender: "Female"}
+        ];
+
+        var table = '';
+        student.forEach((item) => {
+            table+="<tr>";
+                table+="<td>"+item.Name+"</td>";
+                table+="<td>"+item.Phone_No+"</td>";
+                table+="<td>"+item.Email_Id+"</td>";
+                table+="<td>"+item.Gender+"</td>";
+            table+="</tr>";
+        });
+        console.log(table);
+        document.getElementById('demo').innerHTML = table;
+    </script>
+    
+</body>
+</html>           
